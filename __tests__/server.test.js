@@ -25,7 +25,7 @@ afterAll(async () => {
   await db.end();
 });
 
-describe.only("users", () => {
+describe("users", () => {
   describe("POST /users/register", () => {
     it("creates a new user and sends back a token", async () => {
       const response = await request(app).post("/users/register").send({
